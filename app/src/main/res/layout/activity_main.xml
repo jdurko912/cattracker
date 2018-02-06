@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cattracker.joe.cattracker.MainActivity">
+
+    <ImageView
+        android:id="@+id/mainImage1"
+        android:layout_width="259dp"
+        android:layout_height="160dp"
+        app:srcCompat="@drawable/mainactivity2"
+        tools:layout_editor_absoluteX="63dp"
+        tools:layout_editor_absoluteY="90dp"
+        android:contentDescription="@string/mainImage1"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/cameraButton"
+        android:layout_width="197dp"
+        android:layout_height="95dp"
+        android:background="@drawable/mainbutton_border"
+        android:fontFamily="casual"
+        android:text="@string/cat_snap_button"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="94dp"
+        tools:layout_editor_absoluteY="362dp"
+        android:layout_below="@+id/mapButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="19dp" />
+
+    <Button
+        android:id="@+id/mapButton"
+        android:layout_width="197dp"
+        android:layout_height="95dp"
+        android:background="@drawable/mainbutton_border"
+        android:fontFamily="casual"
+        android:text="@string/cat_map_button"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="94dp"
+        tools:layout_editor_absoluteY="250dp"
+        android:layout_marginTop="21dp"
+        android:layout_below="@+id/mainImage1"
+        android:layout_alignStart="@+id/cameraButton" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dp"
+        android:fontFamily="casual"
+        android:text="@string/main_title"
+        android:textAlignment="center"
+        android:textAppearance="@android:style/TextAppearance.Material.Title"
+        android:textSize="42sp"
+        android:textStyle="bold" />
+
+    <ImageButton
+        android:id="@+id/logoutButton"
+        android:layout_width="50dp"
+        android:layout_height="60dp"
+        app:srcCompat="@drawable/logout"
+        android:layout_marginBottom="13dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/mainImage1" />
+
+    <ImageButton
+        android:id="@+id/settingsButton"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:srcCompat="@drawable/settings"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true" />
+</RelativeLayout>

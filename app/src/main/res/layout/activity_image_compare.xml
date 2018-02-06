@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cattracker.joe.cattracker.ImageCompare">
+
+    <Button
+        android:id="@+id/new_cat_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="17dp"
+        android:text="New Cat"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
+
+    <ImageView
+        android:id="@+id/takenPicture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/missing_picture"
+        android:maxHeight="121dp"
+        android:maxWidth="144dp"
+        android:scaleType="centerInside"
+        android:adjustViewBounds="true"
+        tools:layout_editor_absoluteX="59dp"
+        tools:layout_editor_absoluteY="94dp"
+        android:layout_marginTop="14dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/gpsLocationInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Location\nLocation\nLocation\nLocation"
+        android:layout_below="@+id/takenPicture"
+        android:layout_alignStart="@+id/takenPicture"
+        android:layout_marginTop="12dp" />
+
+    <TextView
+        android:layout_marginTop="12dp"
+        android:id="@+id/shelterLocationInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Location\nLocation\nLocation\nLocation"
+        android:layout_below="@+id/gpsLocationInfo"
+        android:layout_alignStart="@+id/gpsLocationInfo" />
+
+    <Button
+        android:id="@+id/imageCompareCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        android:layout_below="@+id/compareImageView"
+        android:layout_alignParentStart="true" />
+
+
+
+    <TextView
+        android:id="@+id/catMatchingHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Click on a cat that matches, or create a new Cat Profile"
+        android:layout_below="@+id/shelterLocationInfo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp" />
+
+    <HorizontalScrollView
+        android:id="@+id/compareImageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/catMatchingHeader"
+        android:layout_marginTop="12dp"
+        android:layout_above="@+id/new_cat_button"
+        android:layout_alignParentEnd="true"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/compareImageLinearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" />
+    </HorizontalScrollView>
+</RelativeLayout>

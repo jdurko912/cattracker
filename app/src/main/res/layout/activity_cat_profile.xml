@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cattracker.joe.cattracker.CatProfile">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:id="@+id/cat_profile_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/cat_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="49dp"
+                app:srcCompat="@drawable/missing_picture" />
+
+            <TextView
+                android:id="@+id/cat_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageView"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="32dp"
+                android:fontFamily="casual"
+                android:gravity="center_horizontal"
+                android:paddingBottom="10dp"
+                android:text="Furry Friend"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:typeface="sans" />
+
+            <LinearLayout
+                android:id="@+id/star_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                android:layout_gravity="center">
+
+                <ImageView
+                    android:id="@+id/star1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/empty_star" />
+
+                <ImageView
+                    android:id="@+id/star2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/empty_star" />
+
+                <ImageView
+                    android:id="@+id/star3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/empty_star" />
+
+                <ImageView
+                    android:id="@+id/star4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/empty_star" />
+
+                <ImageView
+                    android:id="@+id/star5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/empty_star" />
+            </LinearLayout>
+
+            <!-- TODO:  Remove when map is working -->
+            <TextView
+                android:id="@+id/cat_ownership"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:fontFamily="casual"
+                android:paddingBottom="10dp"
+                android:text="Claim Ownership"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:typeface="sans" />
+
+            <ImageView
+                android:id="@+id/fake_cat_map"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/fake_map"
+                android:paddingBottom="30dp" />
+
+            <TextView
+                android:id="@+id/comment_section_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Comments"
+                android:layout_gravity="center"
+                android:layout_marginTop="32dp"
+                android:layout_above="@+id/commentSection"
+                android:fontFamily="casual"
+                android:gravity="center_horizontal"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:typeface="sans"
+                android:paddingBottom="10dp"/>
+
+            <LinearLayout
+                android:id="@+id/commentSection"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                xmlns:android="http://schemas.android.com/apk/res/android"/>
+
+            <Button
+                android:id="@+id/add_new_comment_btn"
+                android:layout_below="@+id/commentSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add Comment" />
+
+            <TextView
+                android:id="@+id/vote_section_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Name Vote"
+                android:layout_gravity="center"
+                android:layout_marginTop="32dp"
+                android:fontFamily="casual"
+                android:gravity="center_horizontal"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:typeface="sans"
+                android:paddingBottom="10dp"/>
+
+            <TableLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/name_vote_table"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                tools:context=".MainActivity"
+                android:background="@android:color/white"
+                android:padding="16dp"
+                android:layout_gravity="center_horizontal"
+                android:stretchColumns="*">
+
+                <TableRow
+                    android:id="@+id/table_header"
+                    android:background="@drawable/table_row"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:weightSum="1"
+                    android:padding="5dp" >
+
+                    <TextView
+                        android:id="@+id/name_header"
+                        android:layout_column="0"
+                        android:layout_weight="0.4"
+                        android:background="@drawable/table_cell"
+                        android:text="Name"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:id="@+id/vote_number_header"
+                        android:layout_column="1"
+                        android:layout_weight="0.4"
+                        android:background="@drawable/table_cell"
+                        android:text="Votes"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:id="@+id/vote_checkbox_header"
+                        android:layout_column="2"
+                        android:layout_weight="0.2"
+                        android:text="Voted"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                </TableRow>
+            </TableLayout>
+
+            <Button
+                android:id="@+id/add_name_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add New Name" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
